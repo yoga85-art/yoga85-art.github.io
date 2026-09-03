@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desain Komunikasi Visual - Aa Prayoga</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #111;
+            color: white;
+            padding: 9px 5%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav b {
+            font-size: 21px;
+            color: #ffd21c;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .hero {
+            background: #111;
+            color: white;
+            padding: 65px 7%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 70px);
+            line-height: .9;
+        }
+
+        .hero span {
+            color: #ffd21c;
+        }
+
+        .hero p {
+            color: #bbb;
+            margin: 18px auto;
+            max-width: 550px;
+        }
+
+        .profile {
+            background: #ffd21c;
+            padding: 30px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .profile h2 {
+            font-size: 28px;
+        }
+
+        section {
+            padding: 55px 7%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .title h2 {
+            font-size: 30px;
+        }
+
+        .title p {
+            color: #777;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card,
+        .tool {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px #0000000c;
+        }
+
+        .card h3 {
+            margin: 5px 0;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .dark {
+            background: #19191d;
+            color: white;
+        }
+
+        .dark .title p {
+            color: #aaa;
+        }
+
+        .dark .card {
+            background: #25252a;
+        }
+
+        .dark .card p {
+            color: #ccc;
+        }
+
+        .icon {
+            font-size: 28px;
+        }
+
+        .flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .flow div {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 115px;
+        }
+
+        .flow .arrow {
+            background: none;
+            color: #c5a500;
+            font-size: 24px;
+            min-width: auto;
+            padding: 0;
+        }
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .tool {
+            color: #222;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            min-height: 145px;
+            justify-content: center;
+        }
+
+        .tool-logo {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 24px;
+        }
+
+        .karya-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .karya-card {
+            background: white;
+            border-radius: 18px;
+            padding: 14px;
+            max-width: 620px;
+            width: 100%;
+            box-shadow: 0 8px 28px #00000018;
+        }
+
+        .karya-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .karya-info {
+            padding: 16px 8px 6px;
+            text-align: center;
+        }
+
+        .karya-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .karya-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 700px) {
+            nav a {
+                display: none;
+            }
+
+            .grid,
+            .tools {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .profile {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .grid,
+            .tools {
+                grid-template-columns: 1fr;
+            }
+
+            .profile {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <b>AA PRAYOGA</b>
+
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#proses">Proses</a>
+        <a href="#tools">Tools</a>
+        <a href="#karya">Karya</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <h1>
+            DESAIN<br>
+            <span>KOMUNIKASI</span><br>
+            VISUAL
+        </h1>
+
+        <p>
+            Website pembelajaran singkat tentang dasar
+            Desain Komunikasi Visual.
+        </p>
+    </header>
+
+    <!-- PROFILE -->
+    <div class="profile" id="tentang">
+        <div>
+            <h2>Aa Prayoga</h2>
+            <p>
+                Desainer Komunikasi Visual
+            </p>
+        </div>
+    </div>
+
+    <!-- TENTANG DKV -->
+    <section>
+        <div class="title">
+            <h2>Apa itu DKV?</h2>
+            <p>Dasar-dasar Desain Komunikasi Visual</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>Desain</h3>
+                <p>
+                    Proses menciptakan visual yang menarik,
+                    terstruktur, dan memiliki tujuan.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💬</div>
+                <h3>Komunikasi</h3>
+                <p>
+                    Menyampaikan pesan kepada audiens
+                    melalui media visual.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👁️</div>
+                <h3>Visual</h3>
+                <p>
+                    Menggunakan warna, bentuk, tipografi,
+                    gambar, dan elemen visual lainnya.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROSES -->
+    <section class="dark" id="proses">
+
+        <div class="title">
+            <h2>Proses Desain</h2>
+            <p>Tahapan sederhana dalam membuat sebuah desain</p>
+        </div>
+
+        <div class="flow">
+
+            <div>
+                <b>01</b>
+                <p>Brief</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+                <b>02</b>
+                <p>Riset</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+                <b>03</b>
+                <p>Konsep</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+                <b>04</b>
+                <p>Desain</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+                <b>05</b>
+                <p>Evaluasi</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools">
+
+        <div class="title">
+            <h2>Tools Desain</h2>
+            <p>Beberapa aplikasi yang sering digunakan desainer</p>
+        </div>
+
+        <div class="tools">
+
+            <div class="tool">
+                <div class="tool-logo">Ps</div>
+                <b>Photoshop</b>
+                <small>Photo Editing</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Ai</div>
+                <b>Illustrator</b>
+                <small>Vector Design</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Id</div>
+                <b>InDesign</b>
+                <small>Layout Design</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Pr</div>
+                <b>Premiere Pro</b>
+                <small>Video Editing</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Ae</div>
+                <b>After Effects</b>
+                <small>Motion Graphic</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">CDR</div>
+                <b>CorelDRAW</b>
+                <small>Vector Design</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Ca</div>
+                <b>Canva</b>
+                <small>Graphic Design</small>
+            </div>
+
+            <div class="tool">
+                <div class="tool-logo">Fi</div>
+                <b>Figma</b>
+                <small>UI/UX Design</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- KARYA -->
+    <section id="karya">
+
+        <div class="title">
+            <h2>Karya Desain</h2>
+            <p>Contoh karya Desain Komunikasi Visual</p>
+        </div>
+
+        <div class="karya-wrap">
+
+            <div class="karya-card">
+
+                <!-- Ganti src dengan gambar karya kamu -->
+                <img
+                    src="karya.jpg"
+                    alt="Karya Desain Komunikasi Visual"
+                >
+
+                <div class="karya-info">
+                    <h3>Karya Aa Prayoga</h3>
+
+                    <p>
+                        Contoh karya desain komunikasi visual
+                        yang dibuat menggunakan prinsip desain.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Aa Prayoga — Desain Komunikasi Visual
+        </p>
+    </footer>
+
+</body>
+  </html>
